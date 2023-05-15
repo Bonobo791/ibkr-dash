@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPY Visualization</title>
+    {{ script|safe }}
+  </head>
+  <body>
+    {{ div|safe }}
+    <p>{{ stats_string }}</p>
+    <script src="{{ cdn_js }}"></script>
+  </body>

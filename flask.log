@@ -1,0 +1,108 @@
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 53, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {hurst_value:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+TypeError: unsupported format string passed to list.__format__
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 53, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {hurst_value:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+TypeError: unsupported format string passed to Series.__format__
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 53, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {hurst_value:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+TypeError: unsupported format string passed to Series.__format__
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 54, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {data[-1]:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+TypeError: unsupported format string passed to list.__format__
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 52, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {data[-1]:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+TypeError: unsupported format string passed to list.__format__
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 52, in visualize
+    p2 = figure(x_axis_type="datetime", title=f"Hurst Exponent (lagging 30 days): {hurst_value:.4f} - " + ('Trending' if hurst_value > 0.5 else 'Mean Reverting'), plot_width=800)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/bokeh/plotting/_figure.py", line 190, in __init__
+    self._raise_attribute_error_with_matches(name, names | opts.properties())
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/bokeh/core/has_props.py", line 368, in _raise_attribute_error_with_matches
+    raise AttributeError(f"unexpected attribute {name!r} to {self.__class__.__name__}, {text} attributes are {nice_join(matches)}")
+AttributeError: unexpected attribute 'plot_width' to figure, similar attributes are outer_width, width or min_width
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 51, in visualize
+    slope, intercept, r_value, p_value, std_err = stats.linregress(np.arange(len(df['Close'])), df['Close'])
+NameError: name 'stats' is not defined
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andrew/Documents/ibkr-dash/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/andrew/Documents/ibkr-dash/app.py", line 41, in visualize
+    if df is None or hurst_df is None:
+NameError: name 'hurst_df' is not defined
