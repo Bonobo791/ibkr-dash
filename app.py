@@ -30,21 +30,6 @@ end_date = '2023-12-31'
 
 fetch_data(start_date, end_date)
 
-# Define your Azure SQL database connection string
-conn_str = (
-    r'Driver={ODBC Driver 18 for SQL Server};'
-    r'Server=tcp:tcp:ibkr.database.windows.net,1433;'
-    r'Database=ibkr;'
-    r'Uid=andrew;'
-    r'Pwd=Lolu2474;'
-    r'Encrypt=yes;'
-    r'TrustServerCertificate=no;'
-    r'Connection Timeout=5;'
-)
-
-# Connect to the database
-conn = pyodbc.connect(conn_str)
-
 # In your data download function
 def download_data():
     df = pdr.get_data_yahoo('SPY', start=start_date, end=end_date)
@@ -97,4 +82,4 @@ def visualize():
     return render_template("plot.html", script=script, div=div, cdn_js=cdn_js, stats_string=stats_string)
 
 if __name__ == "__main__":
-    app.run(port=8000)
+    app.run()
