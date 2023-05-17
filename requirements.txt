@@ -1,0 +1,9 @@
+pandas
+hurst
+bokeh
+flask
+apscheduler
+yfinance
+nolds
+scipy
+numpy

@@ -6,17 +6,12 @@ from bokeh.resources import CDN
 from flask import Flask, render_template
 from apscheduler.schedulers.background import BackgroundScheduler
 import yfinance as yf
-import logging
-from logging.handlers import RotatingFileHandler
 import nolds
 from scipy import stats
 import numpy as np
+from pandas.io import sql
 
 app = Flask(__name__)
-
-handler = RotatingFileHandler('flask.log', maxBytes=10000, backupCount=1)
-handler.setLevel(logging.INFO)
-app.logger.addHandler(handler)
 
 def fetch_data(start_date, end_date):
     global df
@@ -29,17 +24,45 @@ def fetch_data(start_date, end_date):
 start_date = '2022-01-01'
 end_date = '2023-12-31'
 
-scheduler = BackgroundScheduler()
-scheduler.add_job(fetch_data, 'interval', hours=24, args=(start_date, end_date))
-scheduler.start()
+#scheduler = BackgroundScheduler()
+#scheduler.add_job(fetch_data, 'interval', hours=24, args=(start_date, end_date))
+#scheduler.start()
 
 fetch_data(start_date, end_date)
 
+# Define your Azure SQL database connection string
+conn_str = (
+    r'Driver={ODBC Driver 18 for SQL Server};'
+    r'Server=tcp:tcp:ibkr.database.windows.net,1433;'
+    r'Database=ibkr;'
+    r'Uid=andrew;'
+    r'Pwd=Lolu2474;'
+    r'Encrypt=yes;'
+    r'TrustServerCertificate=no;'
+    r'Connection Timeout=5;'
+)
+
+# Connect to the database
+conn = pyodbc.connect(conn_str)
+
+# In your data download function
+def download_data():
+    df = pdr.get_data_yahoo('SPY', start=start_date, end=end_date)
+    df.reset_index(inplace=True)
+
+    # Create a cursor from the connection
+    cursor = conn.cursor()
+
+    # Insert the data into the database
+    for index, row in df.iterrows():
+        cursor.execute("INSERT INTO your_table (Date, Open, High, Low, Close, Volume) VALUES (?, ?, ?, ?, ?, ?)",
+                       row['Date'], row['Open'], row['High'], row['Low'], row['Close'], row['Volume'])
+    cursor.commit()
+
+
 @app.route("/")
 def visualize():
-    global df
-    if df is None:
-        return "Data not available. Please try again later."
+    df = pd.read_sql("SELECT * FROM your_table", conn)
 
     # Adding 5-period moving average to the dataframe
     df['Moving_Average'] = df['Close'].rolling(window=5).mean()
